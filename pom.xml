@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fr.json</groupId>
+  <artifactId>projet-maven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+<properties>
+		<maven.compiler.sources>11</maven.compiler.sources>
+		<maven.compiler.target>11</maven.compiler.target>
+</properties>
+
+<build>
+<plugins>
+<plugin>
+<groupId>org.jsonschema2pojo</groupId>
+<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+<version>1.0.2</version>
+<configuration>
+<sourceDirectory>/Users/moussa/Desktop/societe.json</sourceDirectory>
+<targetPackage>json.diginamic.jsonschema.beans</targetPackage>
+<outputDirectory>/Users/moussa/eclipse-workspace/projet-maven/src/classGenerer</outputDirectory>
+<sourceType></sourceType>
+</configuration>
+<executions>
+<execution>
+<goals>
+<goal>generate</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+
+
+
+</plugins>
+
+
+
+</build>
+
+<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+</dependencies>
+
+</project>
